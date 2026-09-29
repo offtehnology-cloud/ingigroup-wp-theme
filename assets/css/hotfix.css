@@ -1,0 +1,141 @@
+/* =========================================================================
+   HOTFIX v1.1 — правки после первого рендера
+   ========================================================================= */
+
+/* ---- Topbar: перенастраиваем grid, чтобы ничего не наезжало ---- */
+.topbar__inner {
+  display: grid;
+  grid-template-columns: 180px 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 8px 15px;
+}
+.topbar__logo img {
+  height: 42px;
+  width: auto;
+  max-width: 160px;
+}
+.topbar__slogan {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 100%;
+}
+.topbar__menu {
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.topbar__menu a {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+.topbar__phone {
+  font-size: 18px;
+}
+
+/* ---- Оранжевая полоса услуг: чуть компактнее ---- */
+.services-bar__menu {
+  gap: 24px;
+}
+.services-bar__menu a {
+  font-size: 13px;
+}
+
+/* ---- Hero: увеличиваем подзаголовок ---- */
+.hero__subtitle {
+  font-size: 22px;
+  line-height: 1.4;
+  max-width: 620px;
+}
+
+/* ---- Преимущества: 3 + 4 в двух рядах ---- */
+.advantages__grid {
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+.adv-card:nth-child(-n+3) { grid-column: span 4; }   /* 3 карточки по 4 колонки */
+.adv-card:nth-child(n+4)  { grid-column: span 3; }   /* 4 карточки по 3 колонки */
+
+/* ---- Сертификаты / отзывы: фиксируем пропорцию ---- */
+.certificates__item img,
+.opinions__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 400 / 560;
+  object-fit: cover;
+  background: #fafafa;
+}
+
+/* ---- CTA: форма и фото в одинаковых пропорциях ---- */
+.cta-form__form {
+  width: 100%;
+  max-width: 409px;
+}
+.cta-form__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Footer: не даём ссылкам растягиваться ---- */
+.footer__menu a {
+  display: block;
+  max-width: 240px;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+/* ---- Карта: если API не подгрузился, показываем заглушку ---- */
+.map-section__canvas {
+  background: #e6e6e6 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><text x='50' y='50' font-family='sans-serif' font-size='12' text-anchor='middle' fill='%23999'>Карта загружается…</text></svg>") center/200px no-repeat;
+}
+
+/* ---- Адаптив: не ломаем новые гриды ---- */
+@media (max-width: 1199px) {
+  .topbar__inner {
+    grid-template-columns: 140px 1fr auto;
+  }
+  .topbar__slogan {
+    display: none; /* на средних экранах слоган скрываем, меню важнее */
+  }
+  .advantages__grid { grid-template-columns: repeat(2, 1fr); }
+  .adv-card,
+  .adv-card:nth-child(-n+3),
+  .adv-card:nth-child(n+4) { grid-column: auto; }
+}
+
+@media (max-width: 767px) {
+  .topbar__inner {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+  .topbar__nav { display: none; } /* временно, пока не сделаем бургер */
+  .topbar__logo img { height: 32px; }
+  .topbar__phone { font-size: 16px; }
+  .services-bar__menu { gap: 12px; flex-wrap: wrap; }
+  .services-bar__menu a { font-size: 12px; }
+}
+/* Слоган не должен переноситься на 3 строки */
+.topbar__slogan {
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Чуть плотнее верхняя плашка */
+.topbar__inner {
+  grid-template-columns: 150px auto 1fr auto;
+  gap: 16px;
+  padding: 6px 15px;
+  min-height: 62px;
+}
+
+.topbar__logo img { height: 38px; }
+.topbar__phone   { font-size: 17px; }
+.topbar__menu a  { font-size: 11.5px; padding: 4px 7px; }

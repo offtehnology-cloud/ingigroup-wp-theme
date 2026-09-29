@@ -1,0 +1,289 @@
+/* =========================================================
+   IngiGroup — main.css
+   ========================================================= */
+
+:root {
+  --orange:        rgb(239, 126, 25);
+  --orange-hover:  rgb(242, 152, 71);
+  --orange-active: rgb(222, 113, 15);
+  --accent-soft:   rgb(251, 175, 90);
+  --dark:          rgb(18, 18, 18);
+  --dark-2:        rgb(30, 30, 30);
+  --white:         #fff;
+  --grey-333:      #333;
+  --container:     1140px;
+  --font:          'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 62.5%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.43;
+  color: var(--grey-333);
+  background: #fff;
+}
+img { max-width: 100%; height: auto; vertical-align: middle; }
+a { color: inherit; text-decoration: none; }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 15px; }
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: inherit; cursor: pointer; border: 0; background: none;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.btn--outline-orange {
+  border: 5px solid var(--orange);
+  color: var(--white);
+  padding: 25px 55px;
+  font-size: 26px;
+  background: transparent;
+}
+.btn--outline-orange:hover { background: var(--orange); }
+.btn--orange {
+  background: rgb(255, 89, 0);
+  color: var(--white);
+  padding: 25px 34px;
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.btn--orange:hover { background: rgb(230, 80, 0); }
+.btn--block { width: 100%; }
+
+/* ---------- Header ---------- */
+.topbar {
+  background: linear-gradient(to bottom, rgb(38,38,38) 0%, rgb(76,76,76) 100%);
+  color: var(--white);
+}
+.topbar__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 8px 15px;
+}
+.topbar__logo img { height: 50px; width: auto; }
+.topbar__slogan { font-size: 17px; font-weight: 600; line-height: 1.1; flex: 1; text-align: center; }
+.topbar__menu { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; }
+.topbar__menu a {
+  display: inline-block; padding: 2px 5px;
+  font-size: 15px; color: var(--dark);
+  background: #fff; transition: background-color .2s, color .2s;
+}
+.topbar__menu a:hover { background: var(--orange); color: #fff; }
+.topbar__phone { font-size: 26px; font-weight: 700; color: var(--white); white-space: nowrap; }
+
+.services-bar { background: var(--orange); }
+.services-bar__menu {
+  list-style: none; display: flex; justify-content: center;
+  gap: 38px; margin: 0; padding: 5px 0;
+}
+.services-bar__menu a { color: #fff; font-size: 15px; padding: 2px 5px; }
+.services-bar__menu a:hover { background: rgba(255,255,255,.15); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 620px;
+  background-size: cover; background-position: center;
+  color: #fff;
+  display: flex; align-items: center;
+}
+.hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.25); }
+.hero__inner { position: relative; z-index: 2; padding: 90px 15px; }
+.hero__title {
+  font-size: 56px; font-weight: 700; line-height: 1.1;
+  margin: 0 0 24px; text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.hero__subtitle {
+  font-size: 20px; font-weight: 300; line-height: 1.3;
+  margin: 0 0 40px; max-width: 560px;
+}
+
+/* ---------- Заголовки секций ---------- */
+.section-title {
+  font-size: 51px; font-weight: 700; line-height: 1.1;
+  margin: 0 0 30px; text-transform: uppercase;
+}
+.section-title--white { color: #fff; }
+.section-title--ghost { color: #000; opacity: .25; }
+
+/* ---------- Услуги ---------- */
+.services { background: #000; color: #fff; }
+.services__heading { padding: 20px 0; background: #000; }
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; padding: 0 0 20px;
+}
+.service-card {
+  position: relative; min-height: 400px;
+  background-size: cover; background-position: center;
+  display: flex; flex-direction: column; overflow: hidden;
+  color: #fff;
+}
+.service-card__gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(18,18,18,1) 0%, rgba(18,18,18,.45) 100%);
+  transition: opacity .2s;
+}
+.service-card__link { position: absolute; inset: 0; z-index: 1; }
+.service-card__body { position: relative; z-index: 2; padding: 25px 20px; }
+.service-card__title {
+  font-size: 28px; font-weight: 700; line-height: 1.2; margin: 0;
+}
+.service-card__subtitle {
+  font-size: 11px; font-weight: 700; line-height: 1; margin: 12px 0 0; text-transform: uppercase;
+}
+.service-card__hover {
+  position: absolute; inset: auto 0 0 0; z-index: 3;
+  background: rgba(18,18,18,.9);
+  padding: 14px 20px;
+  transform: translateY(100%); opacity: 0;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.service-card:hover .service-card__hover { transform: translateY(0); opacity: 1; }
+.service-card__sublink {
+  display: block;
+  font-size: 15px; line-height: 1.3;
+  color: #fff; padding: 4px 0;
+}
+.service-card__sublink:hover { color: var(--accent-soft); }
+
+/* ---------- Преимущества ---------- */
+.advantages { padding: 50px 0; }
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 20px;
+}
+.adv-card {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 15px;
+  background: linear-gradient(to right, rgba(254,247,245,.43) 0%, rgba(239,126,25,.2) 100%);
+}
+.adv-card__icon { flex: 0 0 40px; font-size: 28px; color: var(--orange); line-height: 1; }
+.adv-card__text { margin: 0; font-size: 15px; line-height: 1.35; }
+.adv-card__text strong { font-weight: 700; }
+
+/* ---------- Сертификаты / Отзывы ---------- */
+.certificates, .opinions { padding: 40px 0; }
+.certificates__grid, .opinions__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.certificates__item, .opinions__item {
+  display: block; background: #fff;
+  border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  padding: 8px;
+  transition: transform .2s;
+}
+.certificates__item:hover, .opinions__item:hover { transform: translateY(-3px); }
+.certificates__item img, .opinions__item img { display: block; width: 100%; }
+
+/* ---------- CTA-форма ---------- */
+.cta-form {
+  background: linear-gradient(to bottom, #000 0%, #181818 100%);
+  color: #fff; padding: 50px 0;
+}
+.cta-form__inner {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 30px; align-items: center;
+}
+.cta-form__image img { display: block; width: 100%; }
+.cta-form__title { font-size: 36px; font-weight: 400; line-height: 1.15; margin: 0 0 20px; }
+.cta-form__title .accent { color: var(--accent-soft); }
+
+.cta-form__form {
+  background: #fff; color: var(--grey-333);
+  padding: 20px; max-width: 409px;
+}
+.cta-form__note { font-size: 14px; margin: 0 0 16px; line-height: 1.5; }
+
+.field { display: block; margin-bottom: 12px; }
+.field__label { display: block; font-size: 13px; opacity: .8; margin-bottom: 6px; }
+.field__input {
+  display: block; width: 100%;
+  padding: 9px 8px;
+  font-size: 14px; font-family: inherit;
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 0; outline: 0;
+  transition: border-color .2s, background-color .2s;
+}
+.field__input:focus { border-color: rgb(255,177,44); background: #fcfcfc; }
+
+.checkbox {
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: 12px; margin: 10px 0 16px; cursor: pointer;
+}
+.checkbox input { display: none; }
+.checkbox__box {
+  flex: 0 0 20px; width: 20px; height: 20px;
+  border: 2px solid rgba(0,0,0,.25); border-radius: 2px;
+  position: relative; transition: .2s;
+}
+.checkbox input:checked + .checkbox__box { background: rgb(255,177,44); border-color: rgb(255,166,14); }
+.checkbox input:checked + .checkbox__box::after {
+  content: ''; position: absolute; left: 5px; top: 2px;
+  width: 5px; height: 10px;
+  border: solid #fff; border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkbox__text a { text-decoration: underline dashed; }
+
+.form-msg { margin-top: 12px; font-size: 13px; }
+.form-msg.is-ok { color: #1a8917; }
+.form-msg.is-error { color: #d32f2f; }
+
+/* ---------- Карта ---------- */
+.map-section { position: relative; }
+.map-section__panel {
+  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  background: #fff; padding: 10px 30px; text-align: center; z-index: 2;
+  width: 60%; box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+.map-section__title { font-size: 45px; font-weight: 700; margin: 10px 0; }
+.map-section__addr { margin: 0 0 10px; font-size: 16px; }
+.map-section__canvas { height: 450px; width: 100%; background: #eee; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--dark-2); color: #fff; padding: 50px 0 20px; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__logo img { height: 40px; width: auto; margin-bottom: 16px; }
+.footer__socials { display: flex; gap: 10px; }
+.footer__socials a {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.06);
+  font-size: 12px; font-weight: 700;
+}
+.footer__socials a:hover { background: var(--orange); }
+.footer__col h4 {
+  font-size: 18px; font-weight: 400; margin: 0 0 16px;
+  color: #f9f9f9;
+}
+.footer__menu { list-style: none; padding: 0; margin: 0; }
+.footer__menu li { margin-bottom: 6px; }
+.footer__menu a { font-size: 14px; color: #e7e7e7; }
+.footer__menu a:hover { color: var(--accent-soft); }
+.footer__phone {
+  display: block; font-size: 24px; font-weight: 700;
+  color: #fff; margin-bottom: 12px;
+}
+.footer__col p { font-size: 14px; line-height: 1.4; margin: 6px 0; color: #e7e7e7; }
+.footer__col a { color: #e7e7e7; }
+.footer__col a:hover { color: var(--accent-soft); }
+.footer__bottom {
+  padding-top: 20px; font-size: 12px; color: #6b6b6b;
+}
