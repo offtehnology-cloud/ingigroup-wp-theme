@@ -1,0 +1,61 @@
+/* =========================================================
+   HOTFIX: точечные правки поверх main.css
+   ПРАВИЛА ДЛЯ .topbar УДАЛЕНЫ — они переехали в main.css
+   ========================================================= */
+
+/* --- Оранжевая полоса услуг --- */
+.services-bar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.services-bar__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 30px;
+}
+
+/* --- Hero-секция --- */
+.hero {
+  min-height: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero__inner {
+  padding: 120px 15px;
+}
+
+/* --- Наши услуги --- */
+.services__grid { gap: 4px; }
+.services__item { border-radius: 4px; overflow: hidden; }
+
+/* --- Преимущества --- */
+.advantages__grid { gap: 20px 30px; }
+.adv-card { align-items: flex-start; }
+.adv-card__text { flex: 1; }
+
+/* --- Сертификаты и отзывы --- */
+.certificates__grid,
+.opinions__grid { gap: 20px; }
+
+.certificates__item img,
+.opinions__item img {
+  max-height: 320px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- CTA-форма --- */
+.cta-form__inner { padding: 20px 15px; }
+
+/* --- Карта --- */
+.map__inner,
+.map-section__canvas { min-height: 480px; }
+
+  
