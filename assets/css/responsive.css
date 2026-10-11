@@ -1,316 +1,1028 @@
 /* =========================================================
-   IngiGroup — responsive.css
-   ========================================================= */
+ *   IngiGroup — responsive.css
+ *   ========================================================= */
 
 /* ============ ≤ 1199px (планшет горизонтальный) ============ */
 @media (max-width: 1199px) {
-  .services__grid,
-  .advantages__grid--3 { grid-template-columns: repeat(2, 1fr); }
-  .advantages__grid--4 { grid-template-columns: repeat(2, 1fr); }
-  .certificates__grid,
-  .opinions__grid { grid-template-columns: repeat(4, 1fr); }
-  .footer__cols { grid-template-columns: 1.4fr 1fr 1.2fr; gap: 30px; }
+	.services__grid,
+	.advantages__grid--3 { grid-template-columns: repeat(2, 1fr); }
+	.advantages__grid--4 { grid-template-columns: repeat(2, 1fr); }
+	.certificates__grid,
+	.opinions__grid { grid-template-columns: repeat(4, 1fr); }
+	.footer__cols { grid-template-columns: 1.4fr 1fr 1.2fr; gap: 30px; }
 
-  .hero { min-height: 620px; }
-  .hero__title { font-size: 48px; }
-  .hero__subtitle { font-size: 18px; }
-  .section-title { font-size: 40px; }
+	.hero { min-height: 620px; }
+	.hero__title { font-size: 48px; }
+	.hero__subtitle { font-size: 18px; }
+	.section-title { font-size: 40px; }
 
-  .topbar .topbar__inner { gap: 0 25px; min-height: 80px; }
-  .topbar__logo { padding: 0 40px 0 20px; }
-  .topbar__logo img { height: 60px; }
-  .topbar__slogan { font-size: 15px; padding: 16px 0 5px; }
-  .topbar__menu { gap: 0; }
-  .topbar__menu a { font-size: 14px; padding: 4px; margin: 0 3px; }
-  .topbar__phone { font-size: 22px; padding: 0 25px; }
+	.topbar .topbar__inner { gap: 0 25px; min-height: 80px; }
+	.topbar__logo { padding: 0 40px 0 20px; }
+	.topbar__logo img { height: 60px; }
+	.topbar__slogan { font-size: 15px; padding: 16px 0 5px; }
+	.topbar__menu { gap: 0; }
+	.topbar__menu a { font-size: 14px; padding: 4px; margin: 0 3px; }
+	.topbar__phone { font-size: 22px; padding: 0 25px; }
 
-  .services-bar .container { padding: 0 20px; }
-  .services-bar__menu a { font-size: 14px; padding: 6px 4px; }
+	.services-bar .container { padding: 0 20px; }
+	.services-bar__menu a { font-size: 14px; padding: 6px 4px; }
 }
 
 /* ============ ≤ 991px (планшет вертикальный) ============ */
 @media (max-width: 991px) {
-  .topbar .topbar__inner {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 0 15px;
-    min-height: auto;
-  }
-  .topbar__logo {
-    grid-row: 1 / 4;
-    grid-column: 1;
-    padding: 10px 20px 10px 15px;
-  }
-  .topbar__logo img { height: 50px; }
-  .topbar__slogan {
-    grid-column: 2; grid-row: 1;
-    justify-self: start;
-    text-align: left;
-    font-size: 12px;
-    padding: 8px 0 4px;
-  }
-  .topbar__nav {
-    grid-column: 2; grid-row: 2;
-    justify-self: start;
-    padding-bottom: 4px;
-  }
-  .topbar__menu { flex-wrap: wrap; gap: 0; }
-  .topbar__menu a { font-size: 12px; margin: 0 2px; padding: 3px; }
-  .topbar__phone {
-    grid-column: 2; grid-row: 3;
-    justify-self: start;
-    font-size: 18px;
-    padding: 4px 0 8px;
-  }
+	.topbar .topbar__inner {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 0 15px;
+		min-height: auto;
+	}
+	.topbar__logo {
+		grid-row: 1 / 4;
+		grid-column: 1;
+		padding: 10px 20px 10px 15px;
+	}
+	.topbar__logo img { height: 50px; }
+	.topbar__slogan {
+		grid-column: 2; grid-row: 1;
+		justify-self: start;
+		text-align: left;
+		font-size: 12px;
+		padding: 8px 0 4px;
+	}
+	.topbar__nav {
+		grid-column: 2; grid-row: 2;
+		justify-self: start;
+		padding-bottom: 4px;
+	}
+	.topbar__menu { flex-wrap: wrap; gap: 0; }
+	.topbar__menu a { font-size: 12px; margin: 0 2px; padding: 3px; }
+	.topbar__phone {
+		grid-column: 2; grid-row: 3;
+		justify-self: start;
+		font-size: 18px;
+		padding: 4px 0 8px;
+	}
 
-  .hero { min-height: 520px; }
-  .hero__inner { padding: 80px 15px; }
-  .hero__title { font-size: 40px; }
-  .hero__subtitle { font-size: 16px; margin-bottom: 30px; }
-  .section-title { font-size: 34px; }
+	.hero { min-height: 520px; }
+	.hero__inner { padding: 80px 15px; }
+	.hero__title { font-size: 40px; }
+	.hero__subtitle { font-size: 16px; margin-bottom: 30px; }
+	.section-title { font-size: 34px; }
 
-  .services__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .service-card { min-height: 300px; }
-  .service-card__title { font-size: 20px; }
+	.services__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+	.service-card { min-height: 300px; }
+	.service-card__title { font-size: 20px; }
 
-  .advantages__grid--3,
-  .advantages__grid--4 { grid-template-columns: 1fr 1fr; gap: 15px; }
-  .adv-card { padding: 12px; min-height: 90px; }
-  .adv-card__icon { width: 50px; height: 50px; left: -2px; }
-  .adv-card__text { padding-top: 34px; font-size: 14px; }
+	.advantages__grid--3,
+	.advantages__grid--4 { grid-template-columns: 1fr 1fr; gap: 15px; }
+	.adv-card { padding: 12px; min-height: 90px; }
+	.adv-card__icon { width: 50px; height: 50px; left: -2px; }
+	.adv-card__text { padding-top: 34px; font-size: 14px; }
 
-  .certificates__grid,
-  .opinions__grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+	.certificates__grid,
+	.opinions__grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
-  .cta-form__inner { grid-template-columns: 1fr; gap: 20px; }
-  .cta-form__image { order: -1; }
-  .cta-form__image img { height: auto; max-width: 100%; margin: 0 auto; }
-  .cta-form__form { max-width: 100%; }
+	.cta-form__inner { grid-template-columns: 1fr; gap: 20px; }
+	.cta-form__image { order: -1; }
+	.cta-form__image img { height: auto; max-width: 100%; margin: 0 auto; }
+	.cta-form__form { max-width: 100%; }
 
-  .map-section__panel { width: 80%; }
-  .map-section__title { font-size: 32px; }
+	.map-section__panel { width: 80%; }
+	.map-section__title { font-size: 32px; }
 }
 
 /* ============ ≤ 767px (мобильные) ============ */
 @media (max-width: 767px) {
 
-  /* --- Шапка --- */
-  .topbar .topbar__inner {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 0;
-    padding: 0;                /* убрали 12px 15px — теперь блоки растянутся */
-    text-align: left;
-  }
+	/* --- Шапка --- */
+	.topbar .topbar__inner {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 0;
+		padding: 0;
+		text-align: left;
+	}
 
-      .topbar__logo {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background: #121212;
-  }
-  .topbar__logo img {
-    height: 88px;             /* было 44px — в 2 раза больше */
-    width: auto;
-    display: block;
-    max-width: 100%;
-  }
+	.topbar__logo {
+		grid-column: 1;
+		grid-row: 1;
+		justify-self: stretch;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		background: #121212;
+	}
+	.topbar__logo img {
+		height: 88px;
+		width: auto;
+		display: block;
+		max-width: 100%;
+	}
 
-    .topbar__slogan {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: stretch;
-    text-align: center;
-    font-size: 13px;          /* было 11px */
-    line-height: 1.3;
-    padding: 8px 15px;
-  }
+	.topbar__slogan {
+		grid-column: 1;
+		grid-row: 2;
+		justify-self: stretch;
+		text-align: center;
+		font-size: 13px;
+		line-height: 1.3;
+		padding: 8px 15px;
+	}
 
-  .topbar__nav { display: none; }
+	.topbar__nav { display: none; }
 
-  .topbar__actions {
-    grid-column: 1;
-    grid-row: 3;
-    margin: 0;                 /* было -15px … -12px — уже не нужно */
-    padding: 14px 20px;
-    background: var(--orange);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-  }
+	.topbar__actions {
+		grid-column: 1;
+		grid-row: 3;
+		margin: 0;
+		padding: 14px 20px;
+		background: var(--orange);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		position: relative;
+	}
 
-  .topbar__phone {
-    font-size: 24px;
-    color: #fff;
-  }
+	.topbar__phone {
+		font-size: 24px;
+		color: #fff;
+	}
 
-  .topbar__burger {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .topbar__burger span {
-    background: #fff;
-  }
-    /* Оранжевая полоса на мобилке скрыта */
-  .services-bar { display: none; }
-  
+	.topbar__burger {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.topbar__burger span {
+		background: #fff;
+	}
+	.services-bar { display: none; }
 
-  /* --- Hero --- */
-  .hero { min-height: 480px; }
-  .hero__inner { padding: 70px 20px; }
-  .hero__title {
-    font-size: 32px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    max-width: 100%;
-  }
-  .hero__subtitle {
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: 24px;
-    max-width: 100%;
-  }
-  .btn--outline-orange {
-    font-size: 16px;
-    padding: 16px 30px;
-    border-width: 3px;
-  }
 
-  /* --- Заголовки секций --- */
-  .section-title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
+	/* --- Hero --- */
+	.hero { min-height: 480px; }
+	.hero__inner { padding: 70px 20px; }
+	.hero__title {
+		font-size: 32px;
+		line-height: 1.1;
+		margin-bottom: 16px;
+		max-width: 100%;
+	}
+	.hero__subtitle {
+		font-size: 15px;
+		line-height: 1.4;
+		margin-bottom: 24px;
+		max-width: 100%;
+	}
+	.btn--outline-orange {
+		font-size: 16px;
+		padding: 16px 30px;
+		border-width: 3px;
+	}
 
-  /* --- Услуги --- */
-  .services__heading { padding: 15px 0; }
-  .services__grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0 15px 20px;
-  }
-  .service-card {
-    min-height: 240px;
-  }
-  .service-card__body {
-    top: 0;
-    padding: 14px 18px;
-  }
-  .service-card__title { font-size: 18px; }
-  .service-card__subtitle { font-size: 10px; }
+	/* --- Заголовки секций --- */
+	.section-title {
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
 
-  /* --- Преимущества --- */
-  .advantages { padding: 40px 0; }
-  .advantages__grid--3,
-  .advantages__grid--4 {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .advantages__grid--3 { margin-bottom: 12px; }
-  .adv-card {
-    padding: 12px 14px;
-    min-height: 80px;
-  }
-  .adv-card__icon {
-    width: 40px;
-    height: 40px;
-    top: -8px;
-    left: -2px;
-  }
-  .adv-card__text {
-    padding-top: 28px;
-    font-size: 13px;
-    line-height: 1.4;
-  }
+	/* --- Услуги --- */
+	.services__heading { padding: 15px 0; }
+	.services__grid {
+		grid-template-columns: 1fr;
+		gap: 10px;
+		padding: 0 15px 20px;
+	}
+	.service-card {
+		min-height: 240px;
+	}
+	.service-card__body {
+		top: 0;
+		padding: 14px 18px;
+	}
+	.service-card__title { font-size: 18px; }
+	.service-card__subtitle { font-size: 10px; }
 
-  /* --- Сертификаты / Отзывы --- */
-  .certificates,
-  .opinions { padding: 30px 0; }
-  .certificates__grid,
-  .opinions__grid {
-    grid-template-columns: 1fr 1fr;   /* две колонки, как в оригинале */
-    gap: 10px;
-  }
-  .certificates__item,
-  .opinions__item { padding: 6px; }
-  .certificates__item img,
-  .opinions__item img { max-height: 240px; }
+	/* --- Преимущества --- */
+	.advantages { padding: 40px 0; }
+	.advantages__grid--3,
+	.advantages__grid--4 {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.advantages__grid--3 { margin-bottom: 12px; }
+	.adv-card {
+		padding: 12px 14px;
+		min-height: 80px;
+	}
+	.adv-card__icon {
+		width: 40px;
+		height: 40px;
+		top: -8px;
+		left: -2px;
+	}
+	.adv-card__text {
+		padding-top: 28px;
+		font-size: 13px;
+		line-height: 1.4;
+	}
 
-    /* --- CTA-форма --- */
-  .cta-form { padding: 40px 0; }
-  .cta-form__inner { padding: 0 15px; gap: 20px; }
-  .cta-form__image { display: block; }         /* было none — показываем */
-  .cta-form__image img {
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-  }
-  .cta-form__title { font-size: 22px; margin-bottom: 14px; }
-  .cta-form__form { padding: 18px; max-width: 100%; }
-  .cta-form__note { font-size: 13px; }
-  .btn--orange { padding: 18px 24px; font-size: 12px; }
+	/* --- Сертификаты / Отзывы --- */
+	.certificates,
+	.opinions { padding: 30px 0; }
+	.certificates__grid,
+	.opinions__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+	.certificates__item,
+	.opinions__item { padding: 6px; }
+	.certificates__item img,
+	.opinions__item img { max-height: 240px; }
 
-  /* --- Карта --- */
-  .map-section__panel {
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 20px 15px;
-    box-shadow: none;
-  }
-  .map-section__title { font-size: 26px; }
-  .map-section__addr { font-size: 14px; }
-  .map-section__canvas { height: 320px; }
+	/* --- CTA-форма --- */
+	.cta-form { padding: 40px 0; }
+	.cta-form__inner { padding: 0 15px; gap: 20px; }
+	.cta-form__image { display: block; }
+	.cta-form__image img {
+		height: auto;
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+	}
+	.cta-form__title { font-size: 22px; margin-bottom: 14px; }
+	.cta-form__form { padding: 18px; max-width: 100%; }
+	.cta-form__note { font-size: 13px; }
+	.btn--orange { padding: 18px 24px; font-size: 12px; }
 
-  /* --- Футер --- */
-  .site-footer { padding: 30px 0 20px; }
-  .footer__top {
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 18px;
-    margin-bottom: 22px;
-  }
-  .footer__logo img { width: 200px; }
-  .footer__socials { gap: 20px; }
-  .footer__socials a { width: 32px; height: 32px; }
+	/* --- Карта --- */
+	.map-section__panel {
+		position: static;
+		transform: none;
+		width: 100%;
+		padding: 20px 15px;
+		box-shadow: none;
+	}
+	.map-section__title { font-size: 26px; }
+	.map-section__addr { font-size: 14px; }
+	.map-section__canvas { height: 320px; }
 
-  .footer__cols { grid-template-columns: 1fr; gap: 24px; padding-bottom: 20px; }
-  .footer__col h4 { font-size: 16px; margin-bottom: 12px; }
-  .footer__menu a { font-size: 13px; }
-  .footer__phone { font-size: 22px; }
-  .footer__line { font-size: 13px; }
+	/* --- Футер --- */
+	.site-footer { padding: 30px 0 20px; }
+	.footer__top {
+		flex-direction: column;
+		gap: 18px;
+		align-items: center;
+		text-align: center;
+		padding-bottom: 18px;
+		margin-bottom: 22px;
+	}
+	.footer__logo img { width: 200px; }
+	.footer__socials { gap: 20px; }
+	.footer__socials a { width: 32px; height: 32px; }
 
-  .footer__bottom {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-    text-align: center;
-    font-size: 12px;
-  }
+	.footer__cols { grid-template-columns: 1fr; gap: 24px; padding-bottom: 20px; }
+	.footer__col h4 { font-size: 16px; margin-bottom: 12px; }
+	.footer__menu a { font-size: 13px; }
+	.footer__phone { font-size: 22px; }
+	.footer__line { font-size: 13px; }
 
-  /* --- AOS: на мобилке отключаем, чтобы не мешало --- */
-  [data-aos] {
-    transform: none !important;
-    opacity: 1 !important;
-  }
+	.footer__bottom {
+		flex-direction: column;
+		gap: 8px;
+		align-items: center;
+		text-align: center;
+		font-size: 12px;
+	}
+
+	/* --- AOS: на мобилке отключаем --- */
+	[data-aos] {
+		transform: none !important;
+		opacity: 1 !important;
+	}
+ 
+     .error-404-page {
+        padding: 50px 0 60px;
+        min-height: auto;
+    }
+    .error-404-page__code {
+        font-size: 80px;
+        margin-bottom: 16px;
+    }
+    .error-404-page__title {
+        font-size: 24px;
+    }
+    .error-404-page__text {
+        margin-bottom: 24px;
+    }
+    .error-404-page__btn {
+        padding: 12px 28px;
+        font-size: 16px;
+        border-width: 4px;
+    }
+ 
 }
 
 /* ============ ≤ 480px (мелкие телефоны) ============ */
 @media (max-width: 480px) {
-  .hero__title { font-size: 26px; }
-  .hero__subtitle { font-size: 14px; }
-  .section-title { font-size: 22px; }
- 
+	.hero__title { font-size: 26px; }
+	.hero__subtitle { font-size: 14px; }
+	.section-title { font-size: 22px; }
+}
+
+/* =========================================================
+ *   СЕРТИФИКАТЫ — архив + лайтбокс
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.certificates-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+	}
+}
+
+@media (max-width: 767px) {
+	.certificates-archive .page-title {
+		font-size: 26px;
+		margin: 16px 0 24px;
+	}
+	.certificates-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+		padding-bottom: 60px;
+	}
+	.certificate-card {
+		padding: 6px;
+	}
+	.lightbox__nav {
+		width: 44px;
+		height: 44px;
+		font-size: 28px;
+	}
+	.lightbox__nav--prev { left: 8px; }
+	.lightbox__nav--next { right: 8px; }
+	.lightbox__close {
+		top: 12px;
+		right: 12px;
+		font-size: 28px;
+	}
+	.lightbox__img {
+		max-width: 94vw;
+		max-height: 86vh;
+	}
+}
+
+/* =========================================================
+ *   ОТЗЫВЫ — архив
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.opinions-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.opinions-archive .page-title {
+		font-size: 26px;
+		margin: 16px 0 24px;
+	}
+	.opinions-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		padding-bottom: 60px;
+	}
+	.opinion-card {
+		padding: 22px 20px;
+	}
+	.opinion-card__company {
+		font-size: 16px;
+	}
+}
+
+/* =========================================================
+ *   ОТЗЫВЫ — сканы
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.opinions-scans-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+	}
+	.opinions-scans__title {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.opinions-scans {
+		margin-bottom: 60px;
+	}
+	.opinions-scans-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+	}
+}
+
+/* =========================================================
+ *   КОНТАКТЫ — адаптив
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.contacts-general {
+		grid-template-columns: 1fr;
+		padding: 24px 30px;
+		gap: 20px;
+	}
+
+	.contacts-offices {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.contacts-requisites {
+		padding: 24px 30px;
+	}
+
+	.contacts-requisites__row {
+		grid-template-columns: 140px 1fr;
+	}
+}
+
+@media (max-width: 767px) {
+	.contacts-archive {
+		padding: 24px 0 50px;
+	}
+
+	.contacts-archive .page-title {
+		font-size: 26px;
+		margin-bottom: 24px;
+	}
+
+	.contacts-general {
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+
+	.contacts-general__value {
+		font-size: 18px;
+	}
+
+	.contacts-general__value--phone {
+		font-size: 22px;
+	}
+
+	.contact-office {
+		padding: 20px;
+	}
+
+	.contact-office__city {
+		font-size: 22px;
+	}
+
+	.contact-office__map {
+		aspect-ratio: 1 / 1;
+	}
+
+	.contacts-requisites {
+		padding: 20px;
+	}
+
+	.contacts-requisites__title {
+		font-size: 18px;
+	}
+
+	.contacts-requisites__row {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+}
+
+/* =========================================================
+ *   МОДАЛКА — мелкие экраны
+ *   ========================================================= */
+
+@media (max-width: 480px) {
+	.modal-callback {
+		padding: 12px;
+		align-items: flex-start;
+		padding-top: 40px;
+	}
+
+	.modal-callback__head {
+		padding: 22px 24px 18px;
+	}
+
+	.modal-callback__title {
+		font-size: 19px;
+	}
+
+	.modal-callback__form {
+		padding: 20px 20px 24px;
+	}
+
+	.modal-callback__close {
+		top: -12px;
+		right: -8px;
+	}
+}
+
+/* =========================================================
+ *   SERVICE HERO — адаптив
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.service-hero { min-height: 520px; }
+	.service-hero__title { font-size: 44px; }
+	.service-hero__sub { font-size: 18px; }
+	.service-hero__btn {
+		padding: 20px 50px;
+		font-size: 18px;
+		border-width: 5px;
+	}
+}
+
+@media (max-width: 767px) {
+	.service-hero { min-height: 460px; }
+	.service-hero__title { font-size: 28px; }
+	.service-hero__sub { font-size: 15px; }
+	.service-hero__btn {
+		padding: 18px 40px;
+		font-size: 16px;
+		border-width: 4px;
+	}
+}
+
+@media (max-width: 480px) {
+	.service-hero { min-height: 420px; }
+	.service-hero__title { font-size: 24px; }
+	.service-hero__sub { font-size: 14px; }
+	.service-hero__btn {
+		padding: 16px 32px;
+		font-size: 15px;
+		border-width: 4px;
+	}
+}
+
+/* =========================================================
+ *   SERVICE INFO — адаптив
+ *   ========================================================= */
+
+@media (max-width: 991px) {
+	.service-info {
+		padding: 0 0 50px;
+	}
+	.service-info__inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 24px;
+	}
+	.service-info__text {
+		flex: none;
+		max-width: 100%;
+		padding: 26px 30px;
+		font-size: 16px;
+	}
+	.service-info__btn {
+		width: 100%;
+		text-align: center;
+		padding: 22px 40px;
+		font-size: 18px;
+		border-width: 4px;
+	}
+}
+
+@media (max-width: 767px) {
+	.service-info {
+		padding: 0 0 40px;
+	}
+	.service-info__text {
+		padding: 22px 24px;
+		font-size: 15px;
+		line-height: 1.5;
+	}
+	.service-info__btn {
+		padding: 20px 32px;
+		font-size: 16px;
+		border-width: 4px;
+	}
+}
+
+/* ============================================================
+   PRODUCTION PAGE — адаптив
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .production-page { padding: 40px 0 30px; }
+    .production-page__h2 { font-size: 26px; }
+    .production-page__h2--mt { margin-top: 40px; }
+    .production-page__lead { font-size: 16px; }
+    .production-page__two-images img { height: 265px; }
+
+    .production-specs__item { grid-template-columns: 1fr; gap: 20px; padding: 26px 0; }
+    .production-specs__imgs { justify-content: flex-start; }
+
+    .production-cta { grid-template-columns: 1fr; min-height: auto; }
+    .production-cta__media { min-height: 260px; }
+    .production-cta__form { padding: 40px 30px; }
+    .production-cta__title { font-size: 22px; }
+    .production-cta__form form { max-width: none; }
+}
+
+@media (max-width: 767px) {
+    .production-page__h2 { font-size: 22px; }
+    .production-page__lead { font-size: 15px; }
+    .production-page__text { font-size: 15px; }
+    .production-page__two-images { grid-template-columns: 1fr; gap: 12px; }
+    .production-page__two-images img { height: 250px; }
+
+    .production-specs__num { font-size: 16px; }
+    .production-specs__desc,
+    .production-specs__list li,
+    .production-specs__mark { font-size: 15px; }
+    .production-specs__imgs img:not(:only-child) { flex: 1 1 0; max-width: calc(50% - 3px); }
+    .production-specs__imgs { gap: 6px; }
+
+    .production-gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .production-gallery { padding: 10px 0 40px; }
+
+    .production-cta__media { min-height: 200px; }
+    .production-cta__form { padding: 32px 20px; }
+    .production-cta__title { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+    .production-page__h2 { font-size: 18px; }
+    .production-page__lead { font-size: 14px; }
+    .production-page__text { font-size: 14px; }
+    .production-page__two-images img { height: 210px; }
+
+    .production-specs__num { font-size: 15px; }
+    .production-specs__desc,
+    .production-specs__list li,
+    .production-specs__mark { font-size: 14px; }
+    .production-specs__imgs img:not(:only-child) { max-width: calc(50% - 3px); }
+
+    .production-cta__media { min-height: 160px; }
+    .production-cta__form { padding: 26px 16px; }
+    .production-cta__title { font-size: 18px; }
+    .production-cta__form input[type="text"],
+    .production-cta__form input[type="tel"] { padding: 14px 16px; font-size: 14px; }
+    .production-cta__form button[type="submit"] { padding: 16px 24px; font-size: 14px; }
+}
+
+/* ==========================================================================
+   RENT PAGE — адаптив
+   ========================================================================== */
+
+@media (max-width: 991px) {
+	.rent-page__section { padding: 48px 0; }
+	.rent-page__h2 { font-size: 26px; }
+	.rent-specs__grid { grid-template-columns: 1fr; gap: 36px; }
+	.rent-extra__grid { grid-template-columns: 1fr; gap: 32px; }
+	.rent-pickup__grid { grid-template-columns: 1fr; gap: 16px; }
+.rent-pickup__item { padding: 22px 20px; gap: 14px; }
+	}
+
+@media (max-width: 767px) {
+	.rent-page__section { padding: 40px 0; }
+	.rent-page__h2 { font-size: 22px; }
+	.rent-page__lead { font-size: 15px; margin-bottom: 28px; }
+	.rent-specs__col-title { font-size: 19px; }
+	.rent-specs__table { font-size: 11.5px; }
+	.rent-specs__table thead th,
+	.rent-specs__table tbody td { padding: 6px 8px; }
+	.rent-extra__title { font-size: 18px; }
+	.rent-extra__text { font-size: 14px; }
+ .rent-pickup__item { padding: 20px 18px; }
+	.rent-faq__q { font-size: 13px; padding: 14px 16px; gap: 10px; }
+	.rent-faq__icon { flex-basis: 22px; width: 22px; height: 22px; }
+	.rent-faq__a { padding: 0 16px 16px 48px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+	.rent-page__h2 { font-size: 19px; }
+	.rent-page__lead { font-size: 14px; }
+	.rent-specs__col-title { font-size: 17px; }
+	.rent-specs__table { font-size: 11px; }
+	.rent-faq__q { font-size: 12px; }
+	.rent-faq__a { font-size: 12.5px; }
+}
+
+/* INSTALLATION PAGE — адаптив */
+@media (max-width: 991px) {
+        .installation-intro { padding: 30px 0 16px; }
+    .installation-intro__h2 { font-size: 26px; }
+    .installation-about__grid { grid-template-columns: 1fr; }
+    .installation-about__img { max-width: 320px; }
+    .installation-works__grid { grid-template-columns: 1fr; }
+    .installation-works__imgs { grid-template-columns: 1fr 1fr; }
+    .installation-steps__btn-wrap { justify-content: center; }
+}
+@media (max-width: 767px) {
+    .installation-intro__h2 { font-size: 22px; }
+    .installation-about__h3,
+    .installation-works__h3,
+    .installation-steps__h3 { font-size: 18px; }
+    .installation-works__imgs { grid-template-columns: 1fr; }
+    .installation-steps__list > li { grid-template-columns: 32px 1fr; gap: 12px; padding: 18px 0; }
+    .installation-steps__num { font-size: 18px; }
+    .installation-steps__title { font-size: 15px; }
+    .installation-steps__desc { font-size: 14px; }
+}
+@media (max-width: 480px) {
+    .installation-intro__h2 { font-size: 19px; }
+    .installation-steps__btn { width: 100%; text-align: center; }
+}
+
+/* ================================================================
+   DEVELOPMENT PAGE — адаптив
+   ================================================================ */
+
+@media (max-width: 991px) {
+    .development-page {
+        padding: 30px 0 16px;
+    }
+    .development-page__h2 {
+        font-size: 26px;
+    }
+    .development-intro__grid {
+        min-height: 0;
+        padding: 24px;
+        background-image: none;
+        background-color: #f5f5f5;
+        grid-template-columns: 1fr;
+    }
+    .development-intro__left { display: none; }
+    .development-intro__card p { font-size: 16px; }
+
+    .development-details__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .development-text p,
+    .development-details__text p {
+        font-size: 16px;
+    }
+
+    .development-spoiler__title,
+    .development-spoiler--large .development-spoiler__title {
+        font-size: 16px;
+    }
+    .development-list__title { font-size: 15px; }
+    .development-list__body { font-size: 14px; }
+
+    .development-order__btn {
+        font-size: 22px;
+        padding: 18px 40px;
+        border-width: 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    .development-page__h2 { font-size: 22px; }
+
+    .development-intro__grid { padding: 18px; }
+    .development-intro__card { padding: 16px 18px; }
+    .development-intro__card p { font-size: 14px; }
+
+    .development-text p,
+    .development-details__text p {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .development-spoiler { padding: 8px 12px; }
+    .development-spoiler__title,
+    .development-spoiler--large .development-spoiler__title {
+        font-size: 15px;
+    }
+    .development-spoiler__body,
+    .development-spoiler__body p { font-size: 14px; }
+
+    .development-list__title { font-size: 14px; line-height: 1.4; }
+    .development-list__body { font-size: 14px; line-height: 1.3; }
+
+    .development-order__wrap { justify-content: center; }
+    .development-order__btn {
+        font-size: 18px;
+        padding: 16px 32px;
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .development-page__h2 { font-size: 19px; }
+    .development-order__btn {
+        width: 100%;
+        padding: 16px 20px;
+    }
+}
+/* ================================================================
+   DEVELOPMENT HERO — мобильный фикс заголовка
+   ================================================================ */
+
+@media (max-width: 991px) {
+    .development-hero .service-hero__content,
+    .development-hero .service-hero__title {
+        max-width: 100%;
+    }
+    .development-hero .service-hero__title {
+        font-size: 40px;
+        line-height: 1.15;
+        /* НЕ добавлять word-break/overflow-wrap — иначе рвёт по буквам */
+    }
+    /* На планшете <br> оставляем — заголовок ещё влезает в 2 строки */
+}
+
+@media (max-width: 767px) {
+    .development-hero .service-hero__title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    /* Убираем жёсткий <br>, пусть переносится сам по словам */
+    .development-hero .service-hero__title br {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .development-hero .service-hero__title {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+}
+
+/* ================================================================
+   FELLING PAGE — адаптив
+   ================================================================ */
+
+@media (max-width: 991px) {
+    .felling-hero .service-hero__content,
+    .felling-hero .service-hero__title { max-width: 100%; }
+    .felling-hero .service-hero__title { font-size: 40px; }
+    .felling-hero .service-hero__sub { font-size: 22px; }
+
+    .felling-page { padding: 30px 0 16px; }
+    .felling-page__h2 { font-size: 26px; }
+
+    .felling-intro__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .felling-intro__img img { max-width: 320px; }
+
+    .felling-spoiler { padding: 16px 18px; }
+    .felling-spoiler__title { font-size: 16px; }
+    .felling-spoiler__body p { font-size: 15px; }
+
+    .felling-text, .felling-text--lead { font-size: 15px; }
+    .felling-volumes__text p { font-size: 15px; }
+
+    .felling-volumes__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .felling-volumes__btn-wrap { justify-content: flex-start; }
+
+    .felling-btn {
+        font-size: 24px;
+        padding: 18px 40px;
+        border-width: 4px;
+    }
+
+        .felling-advantages__h2 { font-size: 40px; }
+    .felling-advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .felling-advantages__item,
+    .felling-advantages__item:nth-child(4),
+    .felling-advantages__item:nth-child(5) {
+        grid-column: auto;   /* сбрасываем сдвиг */
+    }
+
+    .felling-services__h2 { font-size: 40px; }
+    .felling-services__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .felling-services__img img { max-width: 320px; }
+    .felling-services__list li { font-size: 15px; }
+
+    .felling-services__cta {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .felling-services__cta-btn-wrap { justify-content: flex-start; }
+
+    .felling-gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .felling-gallery__item img { height: 150px; }
+}
+
+@media (max-width: 767px) {
+    .felling-hero .service-hero__title { font-size: 30px; line-height: 1.15; }
+    .felling-hero .service-hero__sub { font-size: 18px; line-height: 1.2; }
+
+    .felling-page__h2 { font-size: 22px; }
+
+        .felling-advantages__h2 { font-size: 30px; }
+    .felling-advantages__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .felling-advantages__item {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 16px;
+    }
+    .felling-advantages__icon { flex: 0 0 44px; padding: 0; }
+    .felling-advantages__icon svg { width: 36px; height: 36px; }
+    .felling-advantages__title { font-size: 15px; }
+
+    .felling-btn { font-size: 18px; padding: 16px 28px; border-width: 3px; }
+
+    .felling-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+    .felling-gallery__item img { height: 130px; }
+}
+
+@media (max-width: 480px) {
+    .felling-hero .service-hero__title { font-size: 24px; }
+    .felling-hero .service-hero__sub { font-size: 15px; }
+
+    .felling-volumes__btn-wrap { justify-content: center; }
+    .felling-services__cta-btn-wrap { justify-content: center; }
+    .felling-btn { width: 100%; text-align: center; padding: 14px 16px; }
+}
+
+/* ================================================================
+   PRIVACY PAGE — адаптив
+   ================================================================ */
+
+@media (max-width: 991px) {
+    .privacy-page {
+        padding: 35px 0;
+    }
+    .privacy-page__title {
+        font-size: 34px;
+    }
+    .privacy-page p,
+    .privacy-table {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .privacy-page {
+        padding: 25px 0;
+    }
+    .privacy-page__title {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+    .privacy-page h2 {
+        font-size: 15px;
+        margin: 20px 0 8px;
+    }
+    .privacy-page p,
+    .privacy-table {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .privacy-table th,
+    .privacy-table td {
+        padding: 8px 10px;
+    }
+    .privacy-table th {
+        width: auto;
+        min-width: 100px;
+    }
+    .privacy-page__back a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-page__title {
+        font-size: 22px;
+    }
+    .privacy-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .privacy-table tbody {
+        display: block;
+        min-width: 480px;
+    }
 }
