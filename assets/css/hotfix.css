@@ -58,4 +58,396 @@
 .map__inner,
 .map-section__canvas { min-height: 480px; }
 
-  
+/* ===== Карточки проектов — горизонтальные, 2 в ряд ===== */
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 10px;
+}
+
+/* --- Карточка --- */
+.project-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow .25s, transform .25s;
+}
+.project-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    transform: translateY(-3px);
+}
+
+/* --- Картинка: фиксированная колонка слева --- */
+.project-card__image {
+    display: block;
+    position: relative;
+    flex: 0 0 200px;
+    width: 200px;
+    align-self: stretch;      /* растягивается на всю высоту карточки */
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.project-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* заполняет без искажений */
+    display: block;
+    transition: transform .4s;
+}
+.project-card:hover .project-card__image img {
+    transform: scale(1.05);
+}
+.project-card__no-image {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    color: #bbb; font-size: 14px;
+}
+
+/* --- Тело --- */
+.project-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px 20px 20px;
+    min-width: 0;             /* чтобы длинный текст не распирал flex */
+}
+
+.project-card__region {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--accent-soft);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.project-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+.project-card__title a {
+    color: var(--dark);
+    transition: color .2s;
+}
+.project-card__title a:hover { color: var(--orange); }
+
+/* --- Список работ --- */
+.project-card__works {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    flex: 1;
+}
+.project-card__works li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 4px;
+}
+.project-card__works li::before {
+    content: '•';
+    position: absolute; left: 0; top: 0;
+    color: var(--orange);
+}
+.project-card__works-more {
+    padding-left: 0 !important;
+    color: #999;
+    font-style: italic;
+}
+.project-card__works-more::before { content: none !important; }
+
+/* --- Кнопка --- */
+.project-card__more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 3px;
+    transition: background-color .2s, color .2s;
+}
+.project-card__more:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* --- Скрыть остатки старой разметки --- */
+.project-card__head,
+.project-card__number,
+.project-card__customer,
+.project-card__gallery { display: none !important; }
+
+
+/* ===== Адаптив ===== */
+
+/* Планшет и мобилка: 1 в ряд, картинка сверху, вертикальная карточка */
+@media (max-width: 991px) {
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+    }
+    .project-card__image {
+        flex: none;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .project-card__body {
+        padding: 16px 18px 18px;
+    }
+    .project-card__more {
+        align-self: stretch;   /* кнопка на всю ширину на мобилке */
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card__title { font-size: 15px; }
+    .project-card__works { font-size: 12.5px; }
+} 
+/* =========================================================
+ *  Детальная страница проекта — новая раскладка
+ * ========================================================= */
+
+.project-single { padding: 20px 0 80px; }
+
+.project-single__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 10px 0 18px;
+    text-transform: uppercase;
+}
+
+.project-single__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.project-single__region {
+    background: var(--accent-soft);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.project-single__customer {
+    background: #f5f5f5;
+    padding: 7px 14px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Сетка: фото слева, текст справа */
+.project-single__hero-grid {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+    align-items: start;    /* картинка не растягивается по высоте текста */
+}
+
+/* Картинка */
+.project-single__hero {
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.project-single__hero img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;      /* фиксированные пропорции, не «огромная» */
+    object-fit: cover;        /* кроп без искажений */
+}
+
+/* Правая колонка */
+.project-single__details { min-width: 0; }
+
+.project-single__content {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 24px;
+}
+.project-single__content p:last-child { margin-bottom: 0; }
+
+.project-single__section { margin-bottom: 26px; }
+.project-single__section:last-child { margin-bottom: 0; }
+.project-single__section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+.project-single__section ul {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+.project-single__section li { margin-bottom: 6px; }
+
+/* Галерея — во всю ширину */
+.project-single__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 0 0 40px;
+}
+.project-single__gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.project-single__gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform .4s;
+}
+.project-single__gallery a:hover img { transform: scale(1.05); }
+
+/* Кнопка назад */
+.project-single__back { margin: 50px 0 0; }
+.project-single__back .btn.btn--outline-orange {
+    color: var(--orange);
+    padding: 16px 32px;
+    font-size: 16px;
+    border-width: 4px;
+}
+.project-single__back .btn.btn--outline-orange:hover {
+    color: #fff;
+    background: var(--orange);
+}
+
+/* Планшет */
+@media (max-width: 991px) {
+    .project-single__hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .project-single__hero img { aspect-ratio: 16 / 9; }
+    .project-single__gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Мобилка */
+@media (max-width: 600px) {
+    .project-single__title { font-size: 22px; }
+    .project-single__section h2 { font-size: 16px; }
+    .project-single__section ul,
+    .project-single__content { font-size: 14px; }
+    .project-single__gallery { grid-template-columns: 1fr; }
+    .project-single__back .btn { width: 100%; }
+}
+/* =========================================================
+ *  Детальная проекта — доработки (v2)
+ * ========================================================= */
+
+/* Разделитель под H1 */
+.project-single__divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 0 0 24px;
+}
+
+/* Плашка «Объект» */
+.project-single__object {
+    background: #f7f7f7;
+    border-left: 3px solid var(--accent-soft);
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #444;
+    margin: 0 0 26px;
+    border-radius: 0 3px 3px 0;
+}
+.project-single__object-label {
+    color: #888;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+/* Главное фото — пропорции 3:2 вместо 4:3 */
+.project-single__hero img {
+    aspect-ratio: 3 / 2;
+}
+
+/* Галерея — просторнее + hover-затемнение */
+.project-single__gallery {
+    gap: 16px;
+}
+.project-single__gallery a {
+    position: relative;
+}
+.project-single__gallery a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background-color .25s;
+    pointer-events: none;
+}
+.project-single__gallery a:hover::after {
+    background: rgba(0,0,0,.18);
+}
+
+/* Кнопка «Все проекты →» рядом с «Назад» */
+.project-single__back {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.project-single__all-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--orange);
+    transition: opacity .2s;
+}
+.project-single__all-link:hover { opacity: .75; }
+
+/* Мобилка: кнопка и ссылка друг под другом */
+@media (max-width: 600px) {
+    .project-single__back {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+    .project-single__all-link { text-align: center; }
+}
+/* Подзаголовок внутри списка «Состав работ» */
+.project-single__section li.project-single__works-subhead {
+    list-style: none;
+    margin-left: -20px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+.project-single__section li.project-single__works-subhead:first-child {
+    margin-top: 0;
+}
+.project-single__section li.project-single__works-subhead strong {
+    font-size: 15px;
+    color: var(--dark);
+}

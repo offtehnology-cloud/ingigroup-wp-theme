@@ -11,4 +11,3 @@ require_once INGI_DIR . '/inc/customizer.php';
 require_once INGI_DIR . '/inc/cpt.php';
 require_once INGI_DIR . '/inc/ajax-form.php';
 require get_template_directory() . '/inc/meta-boxes.php';
-require get_template_directory() . '/inc/import-projects.php';

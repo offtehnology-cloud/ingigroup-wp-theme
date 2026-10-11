@@ -700,78 +700,7 @@
 	 color: #888;
  }
 
- /* --- Детальная страница проекта --- */
- .project-single { padding: 20px 0 80px; }
- .project-single__title {
-	 font-size: 44px; font-weight: 700; line-height: 1.15;
-	 margin: 10px 0 20px;
-	 text-transform: uppercase;
- }
- .project-single__meta {
-	 display: flex; flex-wrap: wrap; gap: 12px;
-	 margin-bottom: 28px;
- }
- .project-single__region {
-	 background: var(--accent-soft); color: #fff;
-	 padding: 7px 14px; border-radius: 3px;
-	 font-size: 14px;
- }
- .project-single__customer {
-	 background: #f5f5f5;
-	 padding: 7px 14px; border-radius: 3px;
-	 font-size: 14px;
- }
- .project-single__hero {
-	 margin: 24px 0 36px;
-	 border-radius: 4px;
-	 overflow: hidden;
- }
- .project-single__hero img {
-	 width: 100%; height: auto; display: block;
- }
- .project-single__content {
-	 font-size: 16px; line-height: 1.6;
-	 margin-bottom: 32px;
- }
- .project-single__section { margin-bottom: 36px; }
- .project-single__section h2 {
-	 font-size: 26px; font-weight: 700;
-	 margin: 0 0 14px;
-	 text-transform: uppercase;
- }
- .project-single__section ul {
-	 padding-left: 22px;
-	 margin: 0;
-	 font-size: 16px; line-height: 1.65;
- }
- .project-single__section li { margin-bottom: 6px; }
-
- .project-single__gallery {
-	 display: grid;
-	 grid-template-columns: repeat(3, 1fr);
-	 gap: 14px;
-	 margin: 36px 0;
- }
- .project-single__gallery a {
-	 display: block;
-	 overflow: hidden;
-	 border-radius: 4px;
- }
- .project-single__gallery img {
-	 width: 100%;
-	 aspect-ratio: 4 / 3;
-	 object-fit: cover;
-	 display: block;
-	 transition: transform .4s;
- }
- .project-single__gallery a:hover img { transform: scale(1.05); }
-
- .project-single__back { margin: 50px 0 0; }
- .project-single__back .btn {
-	 padding: 16px 32px;
-	 font-size: 16px;
-	 border-width: 4px;
- }
+ 
 
  /* ---------- Footer ---------- */
  .site-footer {
@@ -1054,3 +983,14 @@
 
 /* Убираем стрелку у элементов подменю (на случай вложенности третьего уровня) */
 .topbar__menu .sub-menu li > a::after { content: none; }
+
+.project-single__back .btn.btn--outline-orange {
+    color: var(--orange);
+    padding: 16px 32px;
+    font-size: 16px;
+    border-width: 4px;
+}
+.project-single__back .btn.btn--outline-orange:hover {
+    color: #fff;
+    background: var(--orange);
+}
