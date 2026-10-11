@@ -10,4 +10,9 @@ require_once INGI_DIR . '/inc/enqueue.php';
 require_once INGI_DIR . '/inc/customizer.php';
 require_once INGI_DIR . '/inc/cpt.php';
 require_once INGI_DIR . '/inc/ajax-form.php';
-require get_template_directory() . '/inc/meta-boxes.php';
+require get_template_directory() . '/inc/meta-boxes-production-gallery.php';
+add_filter( 'ingigroup_company_stats', function ( $stats ) {
+	$stats[0]['value'] = '4+';
+	return $stats;
+} );
+require get_template_directory() . '/inc/meta-boxes-opinion.php';
