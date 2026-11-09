@@ -87,5 +87,21 @@ add_action( 'wp_enqueue_scripts', function () {
     ]);
 } );
 
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
+/**
+ * Добавляем defer для главного скрипта темы
+ */
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+    // Применяем defer только к нашему скрипту main.js
+    if ( 'ingi-main' === $handle ) {
+        return str_replace( ' src', ' defer="defer" src', $tag );
+    }
+    return $tag;
+}, 10, 2 );
+
+// Отключаем скрипты эмодзи и oEmbed для ускорения
+function ingi_disable_wp_extras() {
+    wp_deregister_script( 'wp-embed' );
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+}
+add_action( 'init', 'ingi_disable_wp_extras' );
